@@ -17,8 +17,8 @@ event_hub_name = 'e_operation'
 # Create a producer client to produce and publish events to the event hub.
 
 producer = EventHubProducerClient.from_connection_string(conn_str=event_hub_connection_string, eventhub_name=event_hub_name)
-Cust='LUC'
-Project_ID='LUC-01'
+Cust='ABC'
+Project_ID='ABC-01'
 BatchID = 1
 Aeration_rate=42.0
 Agitator_RPM=100.0
