@@ -223,8 +223,8 @@ loginform.addEventListener('submit', function(e) {
   })
   .then(function(response) {
     // Xử lý phản hồi từ máy chủ Flask
-    // if (response.ok) {
-    if (true) {
+    if (response.ok) {
+    // if (true) {
       
       return response.text();
       // response.text().then(function (data) {
@@ -239,8 +239,8 @@ loginform.addEventListener('submit', function(e) {
   })
   .then(function(data) {
     // alert(data.match("correct"))
-    // if (data.match("correct")) {
-    if (true) {
+    if (data.match("correct")) {
+    // if (true) {
       // alert('cccc')
 
       loginMain.innerHTML = '<div style="color: green;"><h2>Demo Digital Platform</h2></div>'; // Hiển thị phản hồi trong phần tử <p>
@@ -383,21 +383,21 @@ homeSection.style.display = "none";
 
 
 
-dash2Link.addEventListener("click", function(e) {
-    e.preventDefault(); // Ngăn chặn trình duyệt đi đến URL trong href
-    dashboardSection.style.display = "none";
-mlappSection.style.display = "none";
-photoSection.style.display = "block";
-case1.style.display = "none";
-case2.style.display = "none";
-case3.style.display = "none";
-case4.style.display = "none";
-case5.style.display = "none";
-case6.style.display = "none";
-homeSection.style.display = "none";
+// dash2Link.addEventListener("click", function(e) {
+//     e.preventDefault(); // Ngăn chặn trình duyệt đi đến URL trong href
+//     dashboardSection.style.display = "none";
+// mlappSection.style.display = "none";
+// photoSection.style.display = "block";
+// case1.style.display = "none";
+// case2.style.display = "none";
+// case3.style.display = "none";
+// case4.style.display = "none";
+// case5.style.display = "none";
+// case6.style.display = "none";
+// homeSection.style.display = "none";
     
   
-  });
+//   });
     } else {
       var alertMessage = '<div style="color: red;">User name or password incorrect.</div>';
       loginMessage.innerHTML = alertMessage;
