@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Azure Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link rel="shortcut icon" href="/static/image/iconpage.png">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="admin-panel clearfix">
+
+    <div class="slidebar">
+      <div class="logo">
+        <!-- <a src="../image/iconpage.pg" href=""></a> -->
+        <a href="#home"><img src="../static/image/iconhome.png"></a>
+        <!-- <img src="../image/iconpage.png"> -->
+      </div>
+      <ul>
+        <li><a href="#" id="home-link">Home</a></li>
+        <li><a href="#" id="load-link">Load</a></li>
+        <li><a href="#" id="dashboard1-link">Batch-Time Dashboard</a></li>
+        <li><a href="#" id="case1-link">Case 1</a></li>
+        <li><a href="#" id="case2-link">Case 2</a></li>
+        <li><a href="#" id="case3-link">Case 3</a></li>
+        <li><a href="#" id="case4-link">Case 4</a></li>
+        <li><a href="#" id="case5-link">Case 5</a></li>
+        <li><a href="#" id="case6-link">Case 6</a></li>
+
+        <li><a href="#" id="dashboard2-link">Real-Time Dashboard</a></li>
+
+
+
+      </ul>
+    </div>
+
+    <div class="main">
+      <!-- <div class="mainContent clearfix"> -->
+
+       <div id="home">
+        <h2 class="header"><span class="icon"></span>Home</h2>
+
+        <div class="quick-press" id = 'login-main'>
+          <h1 class="logo-label"> LOGIN</h1>
+          <form action="/login"id='login-form' method="post" style="position: relative;">
+            <input type="text" name="user" size="5" placeholder="User name" style="position: relative; top: 10px; left: 210px; width: 300px;"/>
+            <input type="password" name="pass" placeholder="Password" style="position: relative; top: 10px; left: 210px; width: 300px;"/>
+            <!-- <button type="button" class="save"></button> -->
+            <!-- <button type="button" class="delet"></button> -->
+            <p id="login-message" style="position: relative;left: 25%;bottom: 0%;margin-top: 15px;margin-bottom: 5px;">{{loginalerts}}</p>
+            <br>
+            <button type="submit" class="submit-login"style=";left: 40%;margin-top:2px;margin-bottom:10px;" name="submit">Login</button>
+          </form>
+
+
+        </div>
+          <img class='img-cover'src="../static/image/cover_image.png" alt="cover-image"> 
+
+       </div>
+
+
+
+      <div id="load">
+        <h2 class="header"><span class="icon"></span>Load</h2>
+
+        <div class="quick-press" >
+          <h4> ⤵️  Information:</h4>
+          
+            <!-- <button type="submit" class="submit" name="submit">Upload file</button> -->
+          <form action="/Load" id="load-form" method="post"enctype="multipart/form-data">
+            <div class="upfile">
+              <h2>Raman Spectrum Data</h2>
+              <input type="file" id="raman" name="uploaded-file-raman"accept=".csv">
+                <br>
+                <h2>Operation Data</h2>
+                <input type="file" id="operation" name="uploaded-file-operation"accept=".csv">
+              </div>
+            <input type="text" name="CusID" placeholder="Customer ID" autofocus/>
+            <input type="text" name="ProID" placeholder="Project ID" autofocus/>
+            <input type="text" name="BatchID" placeholder="Batch ID (only number)" autofocus/>
+            <div class="container" id = 'processbar' >    
+              <div class="progress progress-striped">
+                <div class="progress-bar">
+                </div>                       
+              </div> 
+            </div>
+            <p id="alert-message">{{alert1}}</p>
+
+
+            <!-- <button type="button" class="save"></button> -->
+            <!-- <button type="button" class="delet"></button> -->
+            <button type="submit"id='submit-link' class="submit" name="submit">Upload</button>
+            
+          </form>
+          
+        </div>
+          
+
+
+
+        <!-- <div class="monitor">
+          <p>Operation Data</p>
+
+          <form method="POST" enctype="multipart/form-data" action="/uploadphoto">
+            <input type="file" id="myFile" name="photos" accept=".png, .jpeg, .jpg, .gif">
+            <br>
+            <br>
+
+            <button type="submit" class="submit" name="submit">Upload file</button>
+          </form>
+          <p>{{alert2}}</p>
+        </div>
+
+        <div class='logo1'>
+          <a href="#"><img src="../static/image/logo-page.png"></a>
+        </div> -->
+
+      </div>
+      <!-- </div> -->
+
+
+
+      <div id="dashboard1">
+        <h2>Dashboard</h2>
+        <iframe title="Raman_Realtime_Platform" width="750" height="480" src="https://app.powerbi.com/dashboardEmbed?dashboardId=252d2da8-1e42-413d-a4dd-c1bc8bfee895&appId=b25a063b-67a8-483f-ab0e-cf3cd8965c80&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVNPVVRILUVBU1QtQVNJQS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOmZhbHNlfX0%3d" frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- <iframe title="Raman_Realtime_Platform" width="750" height="480" src="https://app.powerbi.com/reportEmbed?reportId=4d2dbc28-c893-48f9-88d2-8dd733300a96&autoAuth=true&ctid=e1f00f39-6041-45b0-b309-e0210d8b32af" frameborder="0" allowFullScreen="true"></iframe>-->
+      </div>
+      <div id="case1">
+        <h2>Case1</h2>
+        <iframe title="Case1" width="750" height="480" src="https://app.powerbi.com/dashboardEmbed?dashboardId=252d2da8-1e42-413d-a4dd-c1bc8bfee895&appId=b25a063b-67a8-483f-ab0e-cf3cd8965c80&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVNPVVRILUVBU1QtQVNJQS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOmZhbHNlfX0%3d" frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- <iframe title="Raman_Realtime_Platform" width="750" height="480" src="https://app.powerbi.com/reportEmbed?reportId=4d2dbc28-c893-48f9-88d2-8dd733300a96&autoAuth=true&ctid=e1f00f39-6041-45b0-b309-e0210d8b32af" frameborder="0" allowFullScreen="true"></iframe>-->
+      </div>
+      <div id="case2">
+        <h2>Case2</h2>
+        <iframe title="Case2" width="750" height="480" src="https://app.powerbi.com/dashboardEmbed?dashboardId=252d2da8-1e42-413d-a4dd-c1bc8bfee895&appId=b25a063b-67a8-483f-ab0e-cf3cd8965c80&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVNPVVRILUVBU1QtQVNJQS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOmZhbHNlfX0%3d" frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- <iframe title="Raman_Realtime_Platform" width="750" height="480" src="https://app.powerbi.com/reportEmbed?reportId=4d2dbc28-c893-48f9-88d2-8dd733300a96&autoAuth=true&ctid=e1f00f39-6041-45b0-b309-e0210d8b32af" frameborder="0" allowFullScreen="true"></iframe>-->
+      </div>
+      <div id="case3">
+        <h2>Case3</h2>
+        <iframe title="Case3" width="750" height="480" src="https://app.powerbi.com/dashboardEmbed?dashboardId=252d2da8-1e42-413d-a4dd-c1bc8bfee895&appId=b25a063b-67a8-483f-ab0e-cf3cd8965c80&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVNPVVRILUVBU1QtQVNJQS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOmZhbHNlfX0%3d" frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- <iframe title="Raman_Realtime_Platform" width="750" height="480" src="https://app.powerbi.com/reportEmbed?reportId=4d2dbc28-c893-48f9-88d2-8dd733300a96&autoAuth=true&ctid=e1f00f39-6041-45b0-b309-e0210d8b32af" frameborder="0" allowFullScreen="true"></iframe>-->
+      </div>
+      <div id="case4">
+        <h2>Case4</h2>
+        <iframe title="Case4" width="750" height="480" src="https://app.powerbi.com/dashboardEmbed?dashboardId=252d2da8-1e42-413d-a4dd-c1bc8bfee895&appId=b25a063b-67a8-483f-ab0e-cf3cd8965c80&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVNPVVRILUVBU1QtQVNJQS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOmZhbHNlfX0%3d" frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- <iframe title="Raman_Realtime_Platform" width="750" height="480" src="https://app.powerbi.com/reportEmbed?reportId=4d2dbc28-c893-48f9-88d2-8dd733300a96&autoAuth=true&ctid=e1f00f39-6041-45b0-b309-e0210d8b32af" frameborder="0" allowFullScreen="true"></iframe>-->
+      </div>
+      <div id="case5">
+        <h2>Case5</h2>
+        <iframe title="Case5" width="750" height="480" src="https://app.powerbi.com/dashboardEmbed?dashboardId=252d2da8-1e42-413d-a4dd-c1bc8bfee895&appId=b25a063b-67a8-483f-ab0e-cf3cd8965c80&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVNPVVRILUVBU1QtQVNJQS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOmZhbHNlfX0%3d" frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- <iframe title="Raman_Realtime_Platform" width="750" height="480" src="https://app.powerbi.com/reportEmbed?reportId=4d2dbc28-c893-48f9-88d2-8dd733300a96&autoAuth=true&ctid=e1f00f39-6041-45b0-b309-e0210d8b32af" frameborder="0" allowFullScreen="true"></iframe>-->
+      </div>
+      <div id="case6">
+        <h2>Case6</h2>
+        <iframe title="Case6" width="750" height="480" src="https://app.powerbi.com/dashboardEmbed?dashboardId=252d2da8-1e42-413d-a4dd-c1bc8bfee895&appId=b25a063b-67a8-483f-ab0e-cf3cd8965c80&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVNPVVRILUVBU1QtQVNJQS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOmZhbHNlfX0%3d" frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- <iframe title="Raman_Realtime_Platform" width="750" height="480" src="https://app.powerbi.com/reportEmbed?reportId=4d2dbc28-c893-48f9-88d2-8dd733300a96&autoAuth=true&ctid=e1f00f39-6041-45b0-b309-e0210d8b32af" frameborder="0" allowFullScreen="true"></iframe>-->
+      </div>
+
+      <div id="dashboard2">
+        <h1>Real-Time</h1>
+        <div class="quick-press" >
+          
+
+            <!-- <button type="submit" class="submit" name="submit">Upload file</button> -->
+          <form action="/LoadFile" id = 'loadfile-form' method="post"enctype="multipart/form-data">
+            <button type="submit" class="submit" id = 'loadfile-form'name="refresh">Refresh</button>
+            <ul id="file-list"></ul>
+
+          </form>
+        <!-- <ul>
+          {% for file in csv_file %}
+          <li><a href="https://testproject20230425.blob.core.windows.net/blobarureplatform/{{file}}">{{ file }}</a>
+          </li>
+          {% endfor %}
+        </ul> -->
+      </div>
+
+
+
+      <!-- </div> -->
+    </div>
+
+  </div>
+  <!-- partial -->
+  <!-- <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+  <!-- <link rel="stylesheet" href="../static/script.js"> -->
+
+  <script src="../static/script.js"></script>
+  
+</body>
+
+</html>
+<!-- 
+<script>
+  window.onload = function() {
+    window.location.href = '#home';
+  }
+</script> -->
