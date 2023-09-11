@@ -11,8 +11,6 @@ const case4link = document.getElementById("case4-link");
 const case5link = document.getElementById("case5-link");
 const case6link = document.getElementById("case6-link");
 
-
-
 const homeSection = document.getElementById("home");
 const dashboardSection = document.getElementById("load");
 const mlappSection = document.getElementById("dashboard1");
@@ -178,7 +176,6 @@ form.addEventListener('submit', function(e) {
     // alert(data)
     
     if (data.match("OK")) {
-      // alert('cccc')
       // alert("File uploaded successfully")
       responseMessage.innerHTML = '<div style="color: green;">File uploaded successfully</div>'; // Hiển thị phản hồi trong phần tử <p>
     // Thêm sự kiện click cho các link
@@ -241,7 +238,6 @@ loginform.addEventListener('submit', function(e) {
     // alert(data.match("correct"))
     if (data.match("correct")) {
     // if (true) {
-      // alert('cccc')
 
       loginMain.innerHTML = '<div style="color: green;"><h2>Demo Digital Platform</h2></div>'; // Hiển thị phản hồi trong phần tử <p>
     // Thêm sự kiện click cho các link
