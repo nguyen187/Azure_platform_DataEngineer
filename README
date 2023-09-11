@@ -1,3 +1,5 @@
 RealTime & BatchTime Azure Platform
 RealTime include : Azure Event Hub,Azure Stream Analytics, Azure ML Studio, Azure SQL Database, PowerBI Dashboard.
 BatchTime include : Wep app, Azure Blob Storage, Azure Function Apps, Azure Databricks, Spark Streaming, Azure SQL, PowerBI Report.
+Reference:
+- Connect Azure Data Lake Storage Gen2 and Azure Databricks : https://learn.microsoft.com/en-us/azure/databricks/getting-started/connect-to-azure-storage
