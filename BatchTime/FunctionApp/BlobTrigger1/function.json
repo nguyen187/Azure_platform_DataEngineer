@@ -1,0 +1,26 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob", 
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "operationbronze/{name}",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "httpOutput",
+      "url": "https://adb-1747347507676475.15.azuredatabricks.net//api/2.0/jobs/run-now",
+      "headers": {
+        "Authorization": "Bearer dapi6b582337541c57e5a4c150f4c50a13a6-2"
+      },
+      "method": "POST",
+      "body": {
+        "job_id": "493796669050197"
+      }
+    }
+  ],
+  "disabled": false
+}

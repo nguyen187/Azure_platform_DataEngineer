@@ -1,0 +1,12 @@
+function createArray(a) {
+    'use strict';
+    delete a["Cust"]
+    delete a["Project_ID"]
+    delete a["BatchID"]
+
+    var valuesArray = Object.values(a);
+    const newArray = valuesArray.map((value) => (value === null ? 0 : value));
+    newArray.splice(-3);
+    return newArray;
+}
+

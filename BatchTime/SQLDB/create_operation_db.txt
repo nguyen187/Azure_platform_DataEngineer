@@ -1,0 +1,22 @@
+CREATE TABLE [operation_db] 
+(
+    [Cust]	VARCHAR(40),
+    [Project_ID]	VARCHAR(40),
+    [BatchID]	float,
+    [Time stream]	datetime,
+   
+    [Sugar feed rate(Fs:L/h)]	float,
+    
+    [Water for injection/dilution(Fw:L/h)]	float,
+    
+    [Substrate concentration(S:g/L)]	float,
+    [Dissolved oxygen concentration(DO2:mg/L)]	float,
+    [Vessel Volume(V:L)]	float,
+    
+    [pH(pH:pH)]	float,
+    [Temperature(T:K)]	float,
+
+    [Predict_Pen]	float
+);
+
+

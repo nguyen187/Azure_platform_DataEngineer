@@ -1,0 +1,13 @@
+function createArray(Sugar_feed_rate,Water_for_injection,Substrate_concentration,
+        Temperature,Dissolved_oxygen_concentration,
+        Vessel_Volume,
+        pH
+        ) {
+    'use strict';
+    var array = [Sugar_feed_rate,Water_for_injection,Substrate_concentration,
+        Temperature,Dissolved_oxygen_concentration,
+        Vessel_Volume,
+        pH]
+    return array;
+}
+
