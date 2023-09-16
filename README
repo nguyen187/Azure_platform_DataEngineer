@@ -1,9 +1,3 @@
-RealTime & BatchTime Azure Platform
-RealTime include : Azure Event Hub,Azure Stream Analytics, Azure ML Studio, Azure SQL Database, PowerBI Dashboard.
-BatchTime include : Wep app, Azure Blob Storage, Azure Function Apps, Azure Databricks, Spark Streaming, Azure SQL, PowerBI Report.
-
-![Alt Text]()
-
 <p align="left">
 <a href="https://www.sspaeti.com/" target="_blank"><img src="https://sspaeti.com/images/sspaeti_quadrat.png" height="100"/></a>
 </p>
