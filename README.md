@@ -12,7 +12,6 @@ Topics are:
 * Adding Database features to Azure SQL Server 
 * Visualize realtime data by Power BI dashboard
 <br />
-
 <br>
 2. Batch-Time:
 
@@ -24,9 +23,10 @@ Topics are:
 * Machine Learning Part: Xgboost and ANN
 * Adding Database features to Azure SQL Server 
 * Visualize data by Power BI report
+* Key vault and Azure Active Directory.
 <br />
 
-<img src="https://github.com/nguyen187/Azure_platform/blob/main/Architech.png" width="650">
+<img src="https://github.com/nguyen187/Azure_platform/blob/main/Architech.png" width="700">
 
 ## Starting generate data
 1. Start terminal in RealTime/EventHub folder
