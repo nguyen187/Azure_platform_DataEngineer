@@ -4,6 +4,7 @@ This is a practical example of a data engineering project .
 Topics are:
 <br>
 1. Real-Time:
+
 * Generate data (Python) & send to Azure Event Hub 
 * Read Stream data by Stream Analytics 
 * Storing on Azure Data Lake Storage Gen2 
@@ -11,9 +12,11 @@ Topics are:
 * Adding Database features to Azure SQL Server 
 * Visualize realtime data by Power BI dashboard
 <br />
+
 <br>
 2. Batch-Time:
-* Web App (Html, Css, Js, Flask) : Input file csv and show report 
+
+* Web App (Html, Css, Js, Flask) - Input file csv and show report 
 * Storing on Azure Data Lake Storage Gen2 
 * Trigger Databricks job when new file arrive in Blob Storage: Azure Function Apps
 * Databrick: Ingest data from blob, ETL, Preprocessing and apply Machine learning model (Spark)
@@ -23,7 +26,7 @@ Topics are:
 * Visualize data by Power BI report
 <br />
 
-<img src="https://github.com/nguyen187/Azure_platform/blob/main/Architech.png" width="600">
+<img src="https://github.com/nguyen187/Azure_platform/blob/main/Architech.png" width="650">
 
 ## Starting generate data
 1. Start terminal in RealTime/EventHub folder
