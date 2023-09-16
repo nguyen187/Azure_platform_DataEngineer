@@ -18,8 +18,7 @@ SELECT
     BatchID, 
     trainedEPV1(inputArray) AS MLresult
 FROM ModelInput
-)
-,
+),
 ----------------------prepare raman --------------------
 -- Prepare for Raman
 -- Quey name all columns
@@ -73,6 +72,21 @@ SELECT System.Timestamp() as [Time stream],
     MLresult.Predict as Predict_Pen
 INTO operationdb
 FROM result_temp
+-----------------------blob-----------------
+SELECT System.Timestamp() as [Time stream],
+    Cust, 
+    Project_ID, 
+    BatchID, 
+    MLresult.[Sugar feed rate(Fs:L/h)],
+    MLresult.[Water for injection/dilution(Fw:L/h)],
+    MLresult.[Substrate concentration(S:g/L)],
+    MLresult.[Temperature(T:K)],
+    MLresult.[Dissolved oxygen concentration(DO2:mg/L)],
+    MLresult.[Vessel Volume(V:L)],
+    MLresult.[pH(pH:pH)],
+    MLresult.Predict as Predict_Pen
+INTO operationblob
+FROM result_temp
 -------------------------------RAMAN---------------------------------------------------------------
 --------------1. Dashboard  -----------------------------------
 select System.Timestamp() AS [Time stream],Cust,Project_ID,BatchID,Raman_ML_Result.*
@@ -88,3 +102,7 @@ from filter_raman
 select Cust,Project_ID,BatchID,System.Timestamp() AS [Time stream],Raman_ML_Result.*
 into ramandb
 from result_raman
+-----------------blob
+select Cust, Project_ID,BatchID,System.Timestamp() AS [Time stream],filter_raman.resultfilter.*
+into ramanblob
+from filter_raman
