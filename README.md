@@ -18,7 +18,8 @@ environment.
 <br>
 Architecture with Stream Analytic:
 
-<img src="https://github.com/nguyen187/Azure_platform/tree/main/RealTime/RealTimeWithStreamAnalytic/Architecture_StreamAnalytic.png" width="600">
+<img src="https://github.com/nguyen187/Azure_platform/blob/main/RealTime/RealTimeWithStreamAnalytic/Architecture_StreamAnalytic.png" width="600">
+
 * Generate data (Python) & send to Azure Event Hub 
 * Read Stream data by Stream Analytics 
 * Storing on Azure Data Lake Storage Gen2 
@@ -27,14 +28,11 @@ Architecture with Stream Analytic:
 * Visualize real-time data by the Power BI dashboard
 
 Architecture with DataBricks:
-<img src="https://github.com/nguyen187/Azure_platform/tree/main/RealTime/RealTimeWithDatabricks/Architecture_Databrick.png" width="600">
+<img src="https://github.com/nguyen187/Azure_platform/blob/main/RealTime/RealTimeWithDatabricks/Architecture_Databrick.png" width="600">
 * Generate data (Python) & send to Azure Event Hub.
 * Databricks: using spark to read stream data from the event hub, save data with parquet format in Azure Data Lake Storage Gen2, using push API to send data to Power BI dashboard.
-
-2. Batch-Time:
-=======
-
 <br />
+2. Batch-Time:
 
 * Web App (Html, Css, Js, Flask) : Input file csv and show report 
 * Storing on Azure Data Lake Storage Gen2 
