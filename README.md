@@ -1,15 +1,15 @@
 # RealTime & BatchTime Azure Platform
 
-This is a practical example of a data engineering project . 
+This is a practical example of a data engineering project. 
 Topics are:
 1. Infrastructure as Code (IaC) with terraform:
 <br>
 Benefit:
-* Automate infastructure management
-* Understanding  infastructure changes before being applied
-Obejective:
-* Deploy a resource group, a virtual machine, a simple storage, a datawarehouse.
-Advanced Criterial:
+* Automate infrastructure management
+* Understanding  infrastructure changes before being applied
+Objective:
+* Deploy a resource group, a virtual machine, a simple storage, and a data warehouse.
+Advanced Criteria:
 * State management: Proper management and storage of the state, possible remote backends.
 * Modularity: Scripts are modularized using modules, promoting reusability.
 * Destruction: Safe destruction of resources without leaving orphaned resources in the cloud
@@ -24,12 +24,12 @@ Architecture with Stream Analytic:
 * Storing on Azure Data Lake Storage Gen2 
 * Machine Learning Part: Deploy endpoint Machine learning (trained model) by Azure Machine Learning Studio
 * Adding Database features to Azure SQL Server 
-* Visualize realtime data by Power BI dashboard
+* Visualize real-time data by the Power BI dashboard
 
 Architecture with DataBricks:
 <img src="https://github.com/nguyen187/Azure_platform/tree/main/RealTime/RealTimeWithDatabricks/Architecture_Databrick.png" width="600">
 * Generate data (Python) & send to Azure Event Hub.
-* Databricks: using spark to read tream data from event hub, save data with parquet format in Azure Data Lake Storage Gen2, using push API to send data to Power BI dashboard.
+* Databricks: using spark to read stream data from the event hub, save data with parquet format in Azure Data Lake Storage Gen2, using push API to send data to Power BI dashboard.
 
 2. Batch-Time:
 =======
