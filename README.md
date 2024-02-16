@@ -2,23 +2,22 @@
 
 This is a practical example of a data engineering project. 
 Topics are:
-1. Infrastructure as Code (IaC) with terraform:
+## 1. Infrastructure as Code (IaC) with terraform:
 
-Benefit:
+### Benefit:
 * Automate infrastructure management
-* Understanding  infrastructure changes before being applied
-Objective:
-* Deploy a resource group, a virtual machine, a simple storage, and a data warehouse.
-Advanced Criteria:
+* Understanding  infrastructure changes before being applied<br>
+### Objective:
+* Deploy a resource group, a virtual machine, a simple storage, and a data warehouse.<br>
+### Advanced Criteria:
 * State management: Proper management and storage of the state, possible remote backends.
 * Modularity: Scripts are modularized using modules, promoting reusability.
 * Destruction: Safe destruction of resources without leaving orphaned resources in the cloud
 environment.
 
+## 2. Real-Time:
 
-2. Real-Time:
-
-Architecture with Stream Analytic:
+### Architecture with Stream Analytic:
 
 <img src="https://github.com/nguyen187/Azure_platform/blob/main/RealTime/RealTimeWithStreamAnalytic/Architecture_StreamAnalytic.png" width="600">
 
@@ -29,13 +28,14 @@ Architecture with Stream Analytic:
 * Adding Database features to Azure SQL Server 
 * Visualize real-time data by the Power BI dashboard
 
-Architecture with DataBricks:
+### Architecture with DataBricks:
 
 <img src="https://github.com/nguyen187/Azure_platform/blob/main/RealTime/RealTimeWithDatabricks/Architecture_Databrick.png" width="600">
-* Generate data (Python) & send to Azure Event Hub.
+
+* Generate data (Python) & send to Azure Event Hub.<br>
 * Databricks: using spark to read stream data from the event hub, save data with parquet format in Azure Data Lake Storage Gen2, using push API to send data to Power BI dashboard.
 
-3. Batch-Time:
+## 3. Batch-Time:
 
 <img src="https://github.com/nguyen187/Azure_platform/blob/main/Architech.png" width="600">
 
