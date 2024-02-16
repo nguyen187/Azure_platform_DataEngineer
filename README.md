@@ -14,7 +14,9 @@ Advanced Criteria:
 * Modularity: Scripts are modularized using modules, promoting reusability.
 * Destruction: Safe destruction of resources without leaving orphaned resources in the cloud
 environment.
-1. Real-Time:
+<br/>
+
+2. Real-Time:
 <br>
 Architecture with Stream Analytic:
 
@@ -28,11 +30,14 @@ Architecture with Stream Analytic:
 * Visualize real-time data by the Power BI dashboard
 
 Architecture with DataBricks:
+
 <img src="https://github.com/nguyen187/Azure_platform/blob/main/RealTime/RealTimeWithDatabricks/Architecture_Databrick.png" width="600">
 * Generate data (Python) & send to Azure Event Hub.
 * Databricks: using spark to read stream data from the event hub, save data with parquet format in Azure Data Lake Storage Gen2, using push API to send data to Power BI dashboard.
 <br />
-2. Batch-Time:
+3. Batch-Time:
+
+<img src="https://github.com/nguyen187/Azure_platform/blob/main/Architech.png" width="600">
 
 * Web App (Html, Css, Js, Flask) : Input file csv and show report 
 * Storing on Azure Data Lake Storage Gen2 
@@ -44,7 +49,6 @@ Architecture with DataBricks:
 * Visualize data by Power BI report
 <br />
 <br /><br />
-<img src="https://github.com/nguyen187/Azure_platform/blob/main/Architech.png" width="600">
 
 ## Starting generate data
 1. Start terminal in RealTime/EventHub folder
