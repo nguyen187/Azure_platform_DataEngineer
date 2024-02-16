@@ -2,14 +2,34 @@
 
 This is a practical example of a data engineering project . 
 Topics are:
+1. Infrastructure as Code (IaC) with terraform:
+<br>
+Benefit:
+* Automate infastructure management
+* Understanding  infastructure changes before being applied
+Obejective:
+* Deploy a resource group, a virtual machine, a simple storage, a datawarehouse.
+Advanced Criterial:
+* State management: Proper management and storage of the state, possible remote backends.
+* Modularity: Scripts are modularized using modules, promoting reusability.
+* Destruction: Safe destruction of resources without leaving orphaned resources in the cloud
+environment.
 1. Real-Time:
 <br>
+Architecture with Stream Analytic:
+
+<img src="https://github.com/nguyen187/Azure_platform/tree/main/RealTime/RealTimeWithStreamAnalytic/Architecture_StreamAnalytic.png" width="600">
 * Generate data (Python) & send to Azure Event Hub 
 * Read Stream data by Stream Analytics 
 * Storing on Azure Data Lake Storage Gen2 
 * Machine Learning Part: Deploy endpoint Machine learning (trained model) by Azure Machine Learning Studio
 * Adding Database features to Azure SQL Server 
 * Visualize realtime data by Power BI dashboard
+
+Architecture with DataBricks:
+<img src="https://github.com/nguyen187/Azure_platform/tree/main/RealTime/RealTimeWithDatabricks/Architecture_Databrick.png" width="600">
+* Generate data (Python) & send to Azure Event Hub.
+* Databricks: using spark to read tream data from event hub, save data with parquet format in Azure Data Lake Storage Gen2, using push API to send data to Power BI dashboard.
 
 2. Batch-Time:
 =======
